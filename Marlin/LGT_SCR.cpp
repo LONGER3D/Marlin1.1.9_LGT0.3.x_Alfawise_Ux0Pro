@@ -396,7 +396,7 @@ void LGT_SCR::LGT_MAC_Send_Filename(uint16_t Addr, uint16_t Serial_Num)
 	data_storage[4] = (Addr & 0xFF00) >> 8;
 	data_storage[5] = Addr;
 	card.getfilename(Serial_Num);
-	for (int i = 0; i < 31; i++)
+	for (int i = 0; i < 27; i++)
 	{
 		data_storage[6 + i] = card.longFilename[i];
 	}
